@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ninja To Cat Assignment</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+<style>
+    #wrapper{ 
+        width: 25%;
+        margin: auto;
+    }
+    img{
+        display: block;
+        margin: 5px;
+    }
+</style>
+<body>
+    <script>
+        $(document).ready(function(){
+            $('img').click(function() {          
+            var alt = $(this).attr("data-alt-src");
+            $(this).attr("data-alt-src", $(this).attr("src"));
+            $(this).attr("src", alt);
+            })
+        });
+    </script>
+    <div id="wrapper">
+    <p>Click the image below to see the effect.</p>
+    <img src="../img-ninja-cat/ninja0.png" data-alt-src="../img-ninja-cat/cat0.png"/>
+    <img src="../img-ninja-cat/ninja1.png" data-alt-src="../img-ninja-cat/cat1.png"/>
+    <img src="../img-ninja-cat/ninja2.png" data-alt-src="../img-ninja-cat/cat2.png"/>
+    <img src="../img-ninja-cat/ninja3.png" data-alt-src="../img-ninja-cat/cat3.png"/>
+    <img src="../img-ninja-cat/ninja4.png" data-alt-src="../img-ninja-cat/cat4.png"/>
+    </div>
+</body>
+</html>

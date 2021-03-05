@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <title>jQuery basic assignment!!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>   
+</head>
+<style>
+    img{
+        width: 65px;
+    }
+    button{
+        background-color: darkgreen;
+        border: 1px solid darkgreen;
+        height: 25px;
+        display: block;
+        margin: 5px;
+    }
+    
+</style>
+<body>
+    <h1>My jQuery basic assignment!</h1>
+    <img id="img1" src="../JQuery/jQuery_images/ajax.png" alt="Image 1"/>
+    <img id="img2" src="../JQuery/jQuery_images/angular.png" alt="Image 2"/>
+    <img id="img3" src="../JQuery/jQuery_images/bootstrap.png" alt="Image 3"/>
+    <img id="img4" src="../JQuery/jQuery_images/c-sharp.png" alt="Image 4"/>
+    <img id="img5" src="../JQuery/jQuery_images/jQuery.png" alt="Image 5"/>
+    <p></p>
+    <button id="button1">Click me to hdide the first image</button>
+    <button id="button2">Click me to show the second image</button>
+    <button id="button3">Click me to toggle the third image</button>
+    <button id="button4">Click me to see awhat happens!</button>
+    <button id="button5">Click me to see what happens!</button>
+    
+    <script>
+        $(document).ready(function(){
+            $('#button1').click(function(){
+                $('#img1').hide();
+            })
+
+            $('#button2').click(function(){
+                if ( $("#img2").first().is( ":hidden" ) ) {
+                    $("#img2").slideDown( "slow" );
+                    } else {
+                    $( "#img2" ).hide();
+                }
+            })
+
+            $('#button3').click(function(){
+                $('#img3').toggle();
+            })
+
+            $('#button4').click(function(){
+                $('#img1').show();
+                $('p').text("Seattle is beautiful!")
+            })
+
+            $('#button4').click(function(){
+                $('#img4').css("background", "yellow")
+                
+            })
+
+            $('#button5').click(function(){
+                $('p').html("This logo is OKAY i guess.")
+            })
+
+        });
+    </script>
+</body>
+</html>

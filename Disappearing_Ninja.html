@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Disappearing Ninja Assignment</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+<style>
+    body{
+        width: 20%;
+        margin: auto;
+    }
+    img{
+        width: 85px;
+        display: inline-block;
+    }
+    #click-me{
+        background-color: darkgreen;
+        border: 2px solid darkgreen;
+        height: 35px;
+        display: block;
+        margin: 5px;
+        color: whitesmoke;
+        margin-left: 40%;
+    }
+    h3{
+        text-align: center;
+        color: teal;
+    }
+    
+</style>
+<body>
+    <script>
+        $(document).ready(function(){
+            $('img').click(function(){
+                $(this).hide();
+            })
+
+            $('#click-me').click(function(){
+                $('img').show();
+            })
+        });
+    </script>
+    <h3>Simple jQuery assignment!</h3>
+    <img  src="../JQuery/jQuery_images/ajax.png" alt="Image 1"/>
+    <img  src="../JQuery/jQuery_images/angular.png" alt="Image 2"/>
+    <img  src="../JQuery/jQuery_images/bootstrap.png" alt="Image 3"/>
+    <img  src="../JQuery/jQuery_images/c-sharp.png" alt="Image 4"/>
+    <img  src="../JQuery/jQuery_images/jQuery.png" alt="Image 5"/>
+    <img  src="../JQuery/jQuery_images/RUBY.png" alt="Image 6"/>
+    <img  src="../JQuery/jQuery_images/mysql.png" alt="Image 7"/>
+    <img  src="../JQuery/jQuery_images/python.png" alt="Image 8"/>
+    <button id="click-me">Restore</button>   
+</body>
+</html>
